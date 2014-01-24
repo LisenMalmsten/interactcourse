@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title></title>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+	 <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<A HREF="#" onclick="changeZIndex(10,'yesno');changeZIndex(0,'vid1');">CHOOSE</A>
+
+		<div id="vid1">
+			<video src="http://www.johannesaronsson.se/journey/train.mp4" controls>
+				  Your browser does not support the <code>video</code> element.
+				</video>
+<script>
+video.currentTime <25 
+    var video = document.getElementsByTagName('vid1')[0];
+
+    video.ended = function(e) {
+      changeZIndex(10,'vid2a');changeZIndex(0,'vid1');
+    }
+</script>
+
+		</div>
+
+		<div id="vid2a">
+			<img src="Video2a.jpg">
+		</div>
+
+		<div id="vid2b">
+			<img src="Video2b.jpg">
+		</div>
+
+		<div id="vid3">
+			<img src="Video3.jpg">
+		</div>
+
+		<div id="yesno">
+			<img src="yesno.jpg" usemap="#videomap">
+<map name="videomap">
+  <area shape="rect" coords="0,0,400,480" href="#" onclick="changeZIndex(5,'vid2a');changeZIndex(0,'vid1');">
+</map>
+		</div>
+		<div>
+			<video id="testvideo" class="video-js vjs-default-skin" autoplay preload="auto" width="638" height="480" data-setup="{}">
+<source src="http://www.johannesaronsson.se/journey/train.mp4" type='video/mp4' />
+</video>
+
+<script type="text/javascript">
+    _V_("example_video_1").ready(function(){
+        this.addEvent("ended", function(){
+            window.location = "http://www.dn.se";
+        });
+    });
+</script>
+
+</body>
+</html>
